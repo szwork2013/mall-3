@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>京东test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection"content="telephone=no, email=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+	<meta name="format-detection" content="telphone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+	<!-- 启用360浏览器的极速模式(webkit) -->
+	<meta name="renderer" content="webkit">
+	<!-- 避免IE使用兼容模式 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+	<meta name="HandheldFriendly" content="true">
+	<!-- 微软的老式浏览器 -->
+	<meta name="MobileOptimized" content="320">
+	<!-- uc强制竖屏 -->
+	<meta name="screen-orientation" content="portrait">
+	<!-- QQ强制竖屏 -->
+	<meta name="x5-orientation" content="portrait">
+	<!-- UC强制全屏 -->
+	<meta name="full-screen" content="yes">
+	<!-- QQ强制全屏 -->
+	<meta name="x5-fullscreen" content="true">
+	<!-- UC应用模式 -->
+	<meta name="browsermode" content="application">
+	<!-- QQ应用模式 -->
+	<meta name="x5-page-mode" content="app">
+	<!-- windows phone 点击无高光 -->
+	<meta name="msapplication-tap-highlight" content="no">
+	<!-- 适应移动端end -->
+
+	<link href="/public/css/style.min.css" rel="stylesheet" />
+
+	<!--<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=CQo7ihGENzzw61FVBYobEVTb"></script>-->
+</head>
+<body>
+	<div id="start_animation">
+		<div class="container bg">
+			<div class="hometown">
+				<div class="heart"></div>
+				<div id="top">Made in</div>
+				<div class="city">moon</div>
+				<div id="bottom">With love</div>
+			</div>
+		</div>
+	</div>
+	<div id="wrapper"></div>
+	<div id="alert"></div>
+	<div id="loading"></div>
+</body>
+	<script>
+		var height, fontNum;
+
+		(function() {
+			(function (doc, win) {
+				var docEl = doc.documentElement,
+						resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+						recalc = function () {
+							var width = document.documentElement.clientWidth;
+							height = docEl.clientHeight;
+
+							fontNum = 100 * width / 750;
+							docEl.style.fontSize = fontNum + 'px';
+						};
+
+				recalc();
+				if (!doc.addEventListener) return;
+				win.addEventListener(resizeEvt, recalc, false);
+				doc.addEventListener('DOMContentLoaded', recalc, false);
+			})(document, window);
+		})();
+	</script>
+
+	<script src="/public/js/base.js"></script>
+	<script>
+		$("#top").lettering();
+		$("#bottom").lettering();
+
+		window.onload = function() {
+			$('#start_animation').remove();
+		}
+
+	</script>
+
+	<!--<link href="/css/phone.css" rel="stylesheet" />-->
+	<link href="/public/css/phone.min.css" rel="stylesheet" />
+	<script src="/public/js/app.js"></script>
+</html>

@@ -1,0 +1,62 @@
+@charset "utf-8";
+*{ box-sizing:border-box;}
+body{color: #333; font: 400 14px/1.3 "Helvetica Neue",Helvetica,Arial,sans-serif,'\5b8b\4f53'}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote，th,td{margin:0;padding:0;}
+a{text-decoration:none;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img {border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul {list-style:none;}
+q:before, q:after{content:' ';}
+.mt_20{margin-top: 20px;}
+.ml_20{margin-left: 20px;}
+.pt-15{padding-top: 15px;}
+.pl-20{padding-left: 20px;}
+.w-225{width: 225px;}
+/*****文字排版******/
+.f12{font-size:12px;}
+.f13{font-size:13px;}
+.f14{font-size:14px;}
+.f16{font-size:16px;}
+.f20{font-size:20px;}
+.fb{font-weight:bold;}
+.fn{font-weight:normal;}
+/****定位****/
+.tl{text-align:left;}
+.tc{text-align:center;}
+.tr{text-align:right;}
+.bc{margin-left:auto;margin-right:auto;}
+.fl{float:left;}
+.fr{float:right;}
+.cb{clear:both;}
+.cl{clear:left;}
+.cr{clear:right;}
+.clearfix:after{content:'.';display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{zoom: 1}
+.hidden{visibility:hidden;}
+.none{display:none;}
+
+@font-face{
+  font-family:'Glyphicons Halflings';
+  src:url('../fonts/glyphicons-halflings-regular.eot');
+  src:url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'),
+  url('../fonts/glyphicons-halflings-regular.woff') format('woff'),
+  url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+  url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.glyphicon{
+  position:relative;
+  top:1px;
+  display: inline-block;
+  font-family:'Glyphicons Halflings';
+  font-style:normal;
+  font-weight:normal;
+  line-height:1;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.glyphicon-ok:before{content:"\e013";}
+.glyphicon-ok-circle:before{content:"\e089";}
+.glyphicon-remove-circle:before{content:"\e088";}
+.glyphicon-remove:before{content:"\e014";}

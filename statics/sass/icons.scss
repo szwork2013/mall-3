@@ -1,0 +1,70 @@
+$icons: sprite-map("icons/*.png", $layout: 'smart');
+$bigWidth: 49px;
+$bigHeight: 490px;
+
+@function turn($px) {
+  @return $px / 100px * 1rem;
+}
+
+@function pxTurnRem ($px) {
+  @warn $px;
+  @warn type-of($px);
+  @if (type-of($px) == "number") {
+    @return turn($px);
+  }
+
+  @if (type-of($px) == "list") {
+    @if (nth($px, 1) == 0 and nth($px, 2) != 0) {
+      @return 0 turn(nth($px, 2));
+    } @else if (nth($px, 1) == 0 and nth($px, 2) == 0)  {
+      @return 0 0;
+    } @else if (nth($px, 1) != 0 and nth($px, 2) == 0) {
+      @return turn(nth($px, 1)) 0;
+    } @else {
+      @return turn(nth($px, 1)) turn(nth($px, 2));
+    }
+  }
+}
+
+@mixin sprite-info ($icons, $name) {
+  width: pxTurnRem(image-width(sprite-file($icons, $name)));
+  height: pxTurnRem(image-height(sprite-file($icons, $name)));
+  background-image: sprite-url($icons);
+  background-position: pxTurnRem(sprite-position($icons, $name));
+  background-size: pxTurnRem(($bigWidth, $bigHeight));
+  background-repeat: no-repeat;
+}
+
+@mixin sprite-info-active ($icons, $name) {
+  background-position: pxTurnRem(sprite-position($icons, $name))!important;
+}
+.icon-home {
+  @include sprite-info($icons, home);
+}
+.active .icon-home {
+  @include sprite-info-active($icons, home_active);
+}
+.icon-cart {
+  @include sprite-info($icons, cart);
+}
+.active .icon-cart {
+  @include sprite-info-active($icons, cart_active);
+}
+.icon-sort {
+  @include sprite-info($icons, sort);
+}
+.active .icon-sort {
+  @include sprite-info-active($icons, sort_active);
+}
+.icon-tool {
+  @include sprite-info($icons, tool);
+}
+.active .icon-tool {
+  @include sprite-info-active($icons, tool_active);
+}
+.icon-my {
+  @include sprite-info($icons, my);
+}
+.active .icon-my {
+  @include sprite-info-active($icons, my_active);
+}

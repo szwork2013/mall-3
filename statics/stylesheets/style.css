@@ -1,0 +1,190 @@
+/* line 1, ../sass/style.scss */
+#start_animation {
+  background-color: #ccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 9999;
+}
+/* line 9, ../sass/style.scss */
+#start_animation .container {
+  margin: auto;
+  margin-top: 2rem;
+}
+/* line 14, ../sass/style.scss */
+#start_animation .heart {
+  z-index: 1;
+  width: 2.2rem;
+  height: 2.2rem;
+  position: absolute;
+  top: 50%;
+  margin-top: -1.1rem;
+  left: 50%;
+  margin-left: -1.1rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjE3M3B4IiBoZWlnaHQ9IjE1OHB4IiB2aWV3Qm94PSIwIDAgMTczIDE1OCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTczIDE1OCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBmaWxsPSIjRUY0NjU3IiBkPSJNMTU3LjMzMSwxNS41MDRjLTE5LjU1OS0xOS41NTktNTEuMjcxLTE5LjU1OS03MC44MzEsMGMtMTkuNTU5LTE5LjU1OS01MS4yNzEtMTkuNTU5LTcwLjgzMSwwDQoJYy0xOS41NTksMTkuNTU5LTE5LjU1OSw1MS4yNzEsMCw3MC44MzFsNzAuODMxLDcwLjgzbDcwLjgzMS03MC44M0MxNzYuODksNjYuNzc1LDE3Ni44OSwzNS4wNjQsMTU3LjMzMSwxNS41MDR6Ii8+DQo8L3N2Zz4=");
+}
+/* line 27, ../sass/style.scss */
+#start_animation .hometown {
+  font-family: 'Inconsolata', sans-serif;
+  font-weight: bold;
+  font-size: 0.4rem;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  width: 7.5rem;
+  height: 7.5rem;
+  color: #FFF;
+}
+/* line 38, ../sass/style.scss */
+#start_animation #top {
+  width: 2.9rem;
+  margin: auto;
+  position: relative;
+}
+/* line 43, ../sass/style.scss */
+#start_animation #top span {
+  height: 5.12rem;
+  position: absolute;
+  width: 0.29rem;
+  left: 50%;
+  margin-left: -0.14rem;
+}
+/* line 50, ../sass/style.scss */
+#start_animation .char1 {
+  transform: rotate(-36deg);
+}
+/* line 53, ../sass/style.scss */
+#start_animation .char2 {
+  transform: rotate(-24deg);
+}
+/* line 56, ../sass/style.scss */
+#start_animation .char3 {
+  transform: rotate(-12deg);
+}
+/* line 59, ../sass/style.scss */
+#start_animation .char4 {
+  transform: rotate(0deg);
+}
+/* line 62, ../sass/style.scss */
+#start_animation .char5 {
+  transform: rotate(12deg);
+}
+/* line 65, ../sass/style.scss */
+#start_animation .char6 {
+  transform: rotate(24deg);
+}
+/* line 68, ../sass/style.scss */
+#start_animation .char7 {
+  transform: rotate(36deg);
+}
+/* line 72, ../sass/style.scss */
+#start_animation #bottom span {
+  height: 5.12rem;
+  line-height: 10.25rem;
+  position: absolute;
+  width: 0.29rem;
+  left: 50%;
+  margin-left: -0.14rem;
+  top: 0.3rem;
+}
+/* line 81, ../sass/style.scss */
+#start_animation #bottom .char1 {
+  transform: rotate(36deg);
+}
+/* line 84, ../sass/style.scss */
+#start_animation #bottom .char2 {
+  transform: rotate(27deg);
+}
+/* line 87, ../sass/style.scss */
+#start_animation #bottom .char3 {
+  transform: rotate(18deg);
+}
+/* line 90, ../sass/style.scss */
+#start_animation #bottom .char4 {
+  transform: rotate(9deg);
+}
+/* line 93, ../sass/style.scss */
+#start_animation #bottom .char5 {
+  transform: rotate(0deg);
+}
+/* line 96, ../sass/style.scss */
+#start_animation #bottom .char6 {
+  transform: rotate(-9deg);
+}
+/* line 99, ../sass/style.scss */
+#start_animation #bottom .char7 {
+  transform: rotate(-18deg);
+}
+/* line 102, ../sass/style.scss */
+#start_animation #bottom .char8 {
+  transform: rotate(-27deg);
+}
+/* line 105, ../sass/style.scss */
+#start_animation #bottom .char9 {
+  transform: rotate(-36deg);
+}
+/* line 109, ../sass/style.scss */
+#start_animation .city {
+  font-family: "Hammersmith One";
+  display: inline-block;
+  width: 100%;
+  height: 4.39rem;
+  padding-top: 0.7rem;
+  text-align: center;
+  font-size: 1.15rem;
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  margin-top: -1.6rem;
+}
+/* line 122, ../sass/style.scss */
+#start_animation .heart {
+  animation: HEARTBEAT 2.5s infinite;
+}
+/* line 125, ../sass/style.scss */
+#start_animation #top span {
+  animation: BOUNCE 2.5s infinite;
+}
+@keyframes HEARTBEAT {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.3);
+  }
+  10% {
+    transform: scale(1.1);
+  }
+  15% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes BOUNCE {
+  0% {
+    top: 1.61rem;
+  }
+  10% {
+    top: 1.14rem;
+  }
+  15% {
+    top: 1.2rem;
+  }
+  20% {
+    top: 1rem;
+  }
+  75% {
+    top: 1.61rem;
+  }
+  100% {
+    top: 1.61rem;
+  }
+}
