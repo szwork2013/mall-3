@@ -74,7 +74,7 @@ export default React.createClass({
                     <ul className="common">
                         <li>
                             <div className="center">
-                                <NavLink to="/">
+                                <NavLink to="/" onlyActiveOnIndex={true}>
                                     <span className="icon icon-home"></span>
                                     <p>首页</p>
                                 </NavLink>
@@ -82,7 +82,7 @@ export default React.createClass({
                         </li>
                         <li>
                             <div className="center">
-                                <NavLink to="/sort">
+                                <NavLink to="/sort" >
                                     <span className="icon icon-sort"></span>
                                     <p>分类</p>
                                 </NavLink>

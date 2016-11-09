@@ -10,8 +10,8 @@ import NavLink from './common/NavLink'
 export default React.createClass({
 	getInitialState: function () {
 		return {
-			name: '',
-			password: ''
+			name: '123456',
+			password: '123456'
 		};
 	},
 	componentDidMount: function() {
@@ -64,16 +64,18 @@ export default React.createClass({
 		Util.stop(event);
 	},
 	render: function(){
+		var {name, password} = this.state;
+		console.log(name,password);
 		return (
 			<div className="login">
 				<Header type="login" />
 				<div className="scroll_height">
 					<div className="wrp">
 						<div className="input_container">
-							<input name="name" ref="name" value={this.state.name} onChange={this.changeHandle} placeholder="用户名/邮箱/已验证手机" />
+							<input name="name" ref="name" value={this.state.name || "123456"} onChange={this.changeHandle} placeholder="用户名/邮箱/已验证手机" />
 						</div>
 						<div className="input_container">
-							<input type="password" name="password" ref="password" value={this.state.password} onChange={this.changeHandle} placeholder="请输入密码" />
+							<input type="password" name="password" ref="password" value={this.state.password || "123456"} onChange={this.changeHandle} placeholder="请输入密码" />
 						</div>
 						<a className="submit" onClick={this.login}>登录</a>
 						<label className="save_login">

@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 
-var buildPath = path.resolve(__dirname,"public");
+var buildPath = path.resolve(__dirname,"public/js");
 var nodemodules = path.resolve(__dirname,'node_modules');
 
 //var deps = [
